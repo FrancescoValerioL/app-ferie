@@ -1,0 +1,91 @@
+@import "../../../../assets/variables.scss";
+
+.btn {
+    padding: 10px 15px;
+    color: $dark;
+    background-color: $light;
+    font-size: medium;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+@mixin btn-variant($bg-color) {
+    background-color: $bg-color;
+    color: white;
+    &:hover {
+        background-color: darken($color: $bg-color, $amount: 10%);
+    }
+    &:active {
+        background-color: lighten($color: $bg-color, $amount: 10%);
+    }
+}
+
+@mixin outline($color) {
+    background-color: white;
+    border: 2px solid $color;
+    &:hover {
+        background-color: $color;
+    }
+    &:active {
+        color: $dark;
+        background-color: darken($color: $color, $amount: 10%);
+    }
+
+}
+
+.btn-disabled {
+    background-color: rgb(223, 223, 223);
+    color: rgb(155, 155, 155);
+    cursor: default;
+}
+
+.btnoutline-primary {
+    @include outline($primary)
+}
+
+.btnoutline-secondary {
+    @include outline($secondary)
+}
+
+.btnoutline-info {
+    @include outline($info)
+}
+
+.btnoutline-success {
+    @include outline($success)
+}
+
+.btnoutline-warning {
+    @include outline($warning)
+}
+
+.btnoutline-danger {
+    @include outline($danger)
+}
+
+.btn-primary {
+    @include btn-variant($primary)
+}
+
+.btn-secondary {
+    @include btn-variant($secondary)
+}
+
+.btn-info {
+    @include btn-variant($info)
+}
+
+.btn-success {
+    @include btn-variant($success)
+}
+
+.btn-warning {
+    @include btn-variant($warning)
+}
+
+.btn-danger {
+    @include btn-variant($danger)
+}

@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/variables.scss";
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header header header header header header header header'
+        'sidebar main main main main main main main'
+        'footer footer footer footer footer footer footer footer';
+    gap: 1px;
+}
+
+.header {
+    grid-area: header;
+}
+.sidebar {
+    grid-area: sidebar;
+    text-align: center;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: main;
+}
+ 
+
+.footer {
+    grid-area: footer;
+}
+.grid-container > div {
+    background-color: $primary200;
+    padding: 5px;
+}
