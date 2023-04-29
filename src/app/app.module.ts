@@ -3,11 +3,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared-module.module';
 import { HomeComponent } from './pages/home/home.component';
+import { DayCellComponent } from './components/day-cell/day-cell.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DayCellComponent
   ],
   imports: [
     AppRoutingModule,

@@ -2,9 +2,10 @@
   <div class="header"><h1>Header</h1></div>
   <div class="sidebar"><h1>Sidebar</h1></div>
   <div class="main">
-    <div class="day-cell" *ngFor="let day of days">
-      {{ day }}
+    <div class="month-title">
+      <h2>{{ month }}</h2>
     </div>
+    <app-day-cell *ngFor="let day of days" [day]="day"></app-day-cell>
   </div>
   <div class="footer"><h1>Footer</h1></div>
 </div>

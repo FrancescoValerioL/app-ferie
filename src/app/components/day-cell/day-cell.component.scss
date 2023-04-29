@@ -1,0 +1,11 @@
+@import "../../../assets/variables.scss";
+
+.day-cell {
+    box-sizing: border-box;
+    border: 1px solid $dark;
+    background-color: $accent3;
+    width: 220px;
+    height: 220px;
+    padding: 0px;
+    margin: 3px;
+}
