@@ -6,10 +6,10 @@ body {
 }
 .grid-container {
     display: grid;
-    grid-template-areas: 
-        'header header header header header header header header'
-        'sidebar main main main main main main main'
-        'footer footer footer footer footer footer footer footer';
+    grid-template-areas:
+        "header header header header header header header header"
+        "sidebar main main main main main main main"
+        "footer footer footer footer footer footer footer footer";
     gap: 1px;
 }
 
@@ -26,10 +26,11 @@ body {
     grid-area: main;
     justify-content: start;
 }
- 
 
 .footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
 }
 .grid-container > div {
     background-color: $primary200;
